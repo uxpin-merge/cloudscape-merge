@@ -1,8 +1,21 @@
 import React from 'react';
 import CheckboxBase, { CheckboxProps } from '@cloudscape-design/components/checkbox';
 
-const Checkbox = (props:CheckboxProps) => {
-  return <CheckboxBase {...props} />;
+const Checkbox = (props: CheckboxProps) => {
+  const [checked, setChecked] = React.useState(props.checked);
+  React.useEffect(() => {
+    setChecked(props.checked)
+  }, [props]); // Only re-run the effect if value prop changes
+
+  return (
+    <CheckboxBase
+      {...props}
+      onChange={({ detail }) =>
+        setChecked(detail.checked)
+      }
+      checked={checked}
+    />
+  );
 };
 
 export default Checkbox;
