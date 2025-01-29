@@ -82,12 +82,13 @@ module.exports = {
           'src/components/TokenGroup/TokenGroup.tsx',
           'src/components/TopNavigation/TopNavigation.tsx',
           'src/components/TutorialPanel/TutorialPanel.tsx',
-          'src/components/Wizard/Wizard.tsx'
+          'src/components/Wizard/Wizard.tsx',
         ],
       },
     ],
     wrapper: 'src/components/UXPinWrapper/UXPinWrapper.tsx',
     webpackConfig: 'webpack.config.js',
+    settings: { useUXPinProps: true, useConvertingToUXPinClassic: true },
   },
-  name: 'TypeScript Design System'
+  name: 'TypeScript Design System',
 };
