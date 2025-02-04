@@ -6,6 +6,7 @@ module.exports = {
         include: [
           'src/components/Alert/Alert.tsx',
           'src/components/AnchorNavigation/AnchorNavigation.tsx',
+          'src/components/AppLayout/AppLayout.tsx',
           'src/components/Badge/Badge.tsx',
           'src/components/Box/Box.tsx',
           'src/components/BreadcrumbGroup/BreadcrumbGroup.tsx',
@@ -15,6 +16,7 @@ module.exports = {
           'src/components/Checkbox/Checkbox.tsx',
           'src/components/ColumnLayout/ColumnLayout.tsx',
           'src/components/Container/Container.tsx',
+          'src/components/ContentLayout/ContentLayout.tsx',
           'src/components/CopyToClipboard/CopyToClipboard.tsx',
           'src/components/Drawer/Drawer.tsx',
           'src/components/Grid/Grid.tsx',
@@ -31,7 +33,6 @@ module.exports = {
       {
         name: 'TODO',
         include: [
-          'src/components/AppLayout/AppLayout.tsx',
           'src/components/AreaChart/AreaChart.tsx',
           'src/components/AttributeEditor/AttributeEditor.tsx',
           'src/components/Autosuggest/Autosuggest.tsx',
@@ -40,7 +41,6 @@ module.exports = {
           'src/components/Cards/Cards.tsx',
           'src/components/CodeEditor/CodeEditor.tsx',
           'src/components/CollectionPreferences/CollectionPreferences.tsx',
-          'src/components/ContentLayout/ContentLayout.tsx',
           'src/components/DateInput/DateInput.tsx',
           'src/components/DatePicker/DatePicker.tsx',
           'src/components/DateRangePicker/DateRangePicker.tsx',
