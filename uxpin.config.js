@@ -35,6 +35,7 @@ module.exports = {
           'src/components/Select/Select.tsx',
           'src/components/SpaceBetween/SpaceBetween.tsx',
           'src/components/Spinner/Spinner.tsx',
+          'src/components/Tabs/Tabs.tsx',
         ],
       },
       {
@@ -74,7 +75,6 @@ module.exports = {
           'src/components/StatusIndicator/StatusIndicator.tsx',
           'src/components/Steps/Steps.tsx',
           'src/components/Table/Table.tsx',
-          'src/components/Tabs/Tabs.tsx',
           'src/components/TagEditor/TagEditor.tsx',
           'src/components/TextContent/TextContent.tsx',
           'src/components/TextFilter/TextFilter.tsx',
