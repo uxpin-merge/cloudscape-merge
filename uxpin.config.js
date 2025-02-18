@@ -7,6 +7,7 @@ module.exports = {
           'src/components/Alert/Alert.tsx',
           'src/components/AnchorNavigation/AnchorNavigation.tsx',
           'src/components/AppLayout/AppLayout.tsx',
+          'src/components/Autosuggest/Autosuggest.tsx',
           'src/components/Badge/Badge.tsx',
           'src/components/Box/Box.tsx',
           'src/components/BreadcrumbGroup/BreadcrumbGroup.tsx',
@@ -68,7 +69,6 @@ module.exports = {
         include: [
           'src/components/AreaChart/AreaChart.tsx',
           'src/components/AttributeEditor/AttributeEditor.tsx',
-          'src/components/Autosuggest/Autosuggest.tsx',
           'src/components/BarChart/BarChart.tsx',
           'src/components/CollectionPreferences/CollectionPreferences.tsx',
           'src/components/DateRangePicker/DateRangePicker.tsx',
