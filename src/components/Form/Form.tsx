@@ -1,7 +1,10 @@
 import React from 'react';
 import FormBase, { FormProps } from '@cloudscape-design/components/form';
-
-const Form = (props:FormProps) => {
+/**
+* @uxpindocurl https://cloudscape.design/components/form/
+* @uxpindescription A section of a page that has interactive controls with which a user can submit information to a web server.
+*/
+const Form = (props: FormProps) => {
   return <FormBase {...props} />;
 };
 
