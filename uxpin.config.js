@@ -52,6 +52,7 @@ module.exports = {
           'src/components/Toggle/Toggle.tsx',
           'src/components/ToggleButton/ToggleButton.tsx',
           'src/components/TokenGroup/TokenGroup.tsx',
+          'src/components/TopNavigation/TopNavigation.tsx',
         ],
       },
       {
@@ -84,7 +85,6 @@ module.exports = {
           'src/components/TextContent/TextContent.tsx',
           'src/components/TextFilter/TextFilter.tsx',
           'src/components/TimeInput/TimeInput.tsx',
-          'src/components/TopNavigation/TopNavigation.tsx',
           'src/components/TutorialPanel/TutorialPanel.tsx',
           'src/components/Wizard/Wizard.tsx',
         ],
