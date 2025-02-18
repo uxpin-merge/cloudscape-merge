@@ -48,6 +48,7 @@ module.exports = {
           'src/components/StatusIndicator/StatusIndicator.tsx',
           'src/components/Tabs/Tabs.tsx',
           'src/components/Tiles/Tiles.tsx',
+          'src/components/Toggle/Toggle.tsx',
         ],
       },
       {
@@ -81,7 +82,6 @@ module.exports = {
           'src/components/TextFilter/TextFilter.tsx',
           'src/components/Textarea/Textarea.tsx',
           'src/components/TimeInput/TimeInput.tsx',
-          'src/components/Toggle/Toggle.tsx',
           'src/components/ToggleButton/ToggleButton.tsx',
           'src/components/TokenGroup/TokenGroup.tsx',
           'src/components/TopNavigation/TopNavigation.tsx',
