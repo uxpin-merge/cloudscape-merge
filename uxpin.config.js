@@ -9,6 +9,7 @@ module.exports = {
           'src/components/AppLayout/AppLayout.tsx',
           'src/components/Autosuggest/Autosuggest.tsx',
           'src/components/Badge/Badge.tsx',
+          'src/components/Board/Board.tsx',
           'src/components/Box/Box.tsx',
           'src/components/BreadcrumbGroup/BreadcrumbGroup.tsx',
           'src/components/Button/Button.tsx',

@@ -896,6 +896,16 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
+"@cloudscape-design/board-components@^3.0.89":
+  version "3.0.89"
+  resolved "https://registry.yarnpkg.com/@cloudscape-design/board-components/-/board-components-3.0.89.tgz#4e4a250433083799fa2689494e331c648646f906"
+  integrity sha512-XiUsd2KqRQcyN0y9TPq9fwNilhNE32UmnoYoCsBt1tGNEesymYnprPCRi08doxVkMUvnQZlMuFPOpdIQsuGYDQ==
+  dependencies:
+    "@cloudscape-design/component-toolkit" "^1.0.0-beta"
+    "@cloudscape-design/test-utils-core" "^1.0.0"
+    "@dnd-kit/utilities" "^3.2.1"
+    clsx "^1.2.1"
+
 "@cloudscape-design/collection-hooks@^1.0.0":
   version "1.0.59"
   resolved "https://registry.yarnpkg.com/@cloudscape-design/collection-hooks/-/collection-hooks-1.0.59.tgz#7ff9bbe2e3d8b1efd19e3f4030a21a190b22159a"
@@ -2299,7 +2309,7 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
-clsx@^1.1.0:
+clsx@^1.1.0, clsx@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
