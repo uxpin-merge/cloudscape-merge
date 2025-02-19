@@ -2,7 +2,10 @@ import * as React from "react";
 import BoardM, { BoardProps } from "@cloudscape-design/board-components/board";
 import BoardItem from "@cloudscape-design/board-components/board-item";
 import Header from "@cloudscape-design/components/header";
-
+/**
+ * @uxpindocurl https://cloudscape.design/components/board/
+ * @uxpindescription Provides the base for a configurable layout, including drag and drop, responsiveness and grid.
+ */
 // Define your own type for the item expected in renderItem
 interface ItemType {
     id: string;

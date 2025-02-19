@@ -18,6 +18,7 @@ module.exports = {
           'src/components/Cards/Cards.tsx',
           'src/components/Calendar/Calendar.tsx',
           'src/components/Checkbox/Checkbox.tsx',
+          'src/components/CodeView/CodeView.tsx',
           'src/components/CodeEditor/CodeEditor.tsx',
           'src/components/ColumnLayout/ColumnLayout.tsx',
           'src/components/Container/Container.tsx',

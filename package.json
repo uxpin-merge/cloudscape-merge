@@ -12,6 +12,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@cloudscape-design/board-components": "^3.0.89",
+    "@cloudscape-design/code-view": "^3.0.40",
     "@cloudscape-design/components": "^3.0.878",
     "@cloudscape-design/global-styles": "^1.0.34",
     "@types/node": "^18.14.0",
