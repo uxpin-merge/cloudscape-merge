@@ -21,6 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "@uxpin/merge-cli": "3.5.2",
+    "ace-builds": "^1.38.0",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "eslint": "^8.34.0",
