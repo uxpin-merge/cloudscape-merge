@@ -1,42 +1,37 @@
 const path = require('path');
 
 const config = {
-  entry: [
-    './src/index.tsx'
-  ],
+  entry: ['./src/index.tsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
-        {
-            test: /\.tsx?$/,
-            loader: 'ts-loader',
-            exclude: /node_modules/,
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   devServer: {
-    'static': {
-      directory: './dist'
-    }
-  }
+    static: {
+      directory: './dist',
+    },
+  },
 };
 
 module.exports = config;
