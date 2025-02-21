@@ -1,10 +1,10 @@
 import * as React from "react";
 import CardsBase, { CardsProps } from '@cloudscape-design/components/cards';
-import Box from "../../components/Box/Box";
-import SpaceBetween from "../../components/SpaceBetween/SpaceBetween";
-import Button from "../../components/Button/Button";
 import Link from '../Link/Link';
-
+/**
+ * @uxpindocurl https://cloudscape.design/components/cards/
+ * @uxpindescription Represents a collection of resources.
+ */
 export default (props: CardsProps) => {
   const items = props.items
 
@@ -15,6 +15,11 @@ export default (props: CardsProps) => {
     header: key.charAt(0).toUpperCase() + key.slice(1), // Capitalize first letter
     content: (item: any) => item[key],
   }));
+  const [
+    selectedItems,
+    setSelectedItems
+  ] = React.useState([{ name: "Item 2" }]);
+
 
   return (
     <CardsBase
@@ -34,6 +39,11 @@ export default (props: CardsProps) => {
       cardsPerRow={props.cardsPerRow}
       items={items}
       loadingText={props.loadingText}
+      onSelectionChange={({ detail }) =>
+        setSelectedItems(detail?.selectedItems ?? [])
+      }
+      selectedItems={selectedItems}
+
     />
   );
 };
