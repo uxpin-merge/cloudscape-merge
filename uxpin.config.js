@@ -5,6 +5,7 @@ module.exports = {
         name: 'Completed',
         include: [
           'src/components/Alert/Alert.tsx',
+          'src/components/AnnotationContext/AnnotationContext.tsx',
           'src/components/AnchorNavigation/AnchorNavigation.tsx',
           'src/components/AppLayout/AppLayout.tsx',
           'src/components/Autosuggest/Autosuggest.tsx',
