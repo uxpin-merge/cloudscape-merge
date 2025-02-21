@@ -1,7 +1,10 @@
 import React from 'react';
 import SpinnerBase, { SpinnerProps } from '@cloudscape-design/components/spinner';
-
-const Spinner = (props:SpinnerProps) => {
+/**
+* @uxpindocurl https://cloudscape.design/components/spinner/
+* @uxpindescription A compact, looped animation giving the user feedback that a process is currently running.
+*/
+const Spinner = (props: SpinnerProps) => {
   return <SpinnerBase {...props} />;
 };
 
