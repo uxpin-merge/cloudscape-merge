@@ -112,7 +112,7 @@ module.exports = {
     ],
     wrapper: 'src/components/UXPinWrapper/UXPinWrapper.tsx',
     webpackConfig: 'webpack.config.js',
-    settings: { useUXPinProps: true, useConvertingToUXPinClassic: true },
+    settings: { useUXPinProps: true },
   },
   name: 'Cloudscape Design System',
 };
