@@ -1,7 +1,10 @@
 import React from 'react';
 import CollectionPreferencesBase, { CollectionPreferencesProps } from '@cloudscape-design/components/collection-preferences';
-
-const CollectionPreferences = (props:CollectionPreferencesProps) => {
+/**
+ * @uxpindocurl https://cloudscape.design/components/collection-preferences/
+ * @uxpindescription With collection preferences, users can manage their display preferences within a collection.
+ */
+const CollectionPreferences = (props: CollectionPreferencesProps) => {
   return <CollectionPreferencesBase {...props} />;
 };
 
