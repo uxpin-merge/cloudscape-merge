@@ -71,6 +71,7 @@ module.exports = {
           'src/components/ToggleButton/ToggleButton.tsx',
           'src/components/TokenGroup/TokenGroup.tsx',
           'src/components/TopNavigation/TopNavigation.tsx',
+          'src/components/TutorialPanel/TutorialPanel.tsx',
         ],
       },
       {
@@ -105,7 +106,6 @@ module.exports = {
           'src/components/PropertyFilter/PropertyFilter.tsx',
           'src/components/S3ResourceSelector/S3ResourceSelector.tsx',
           'src/components/Table/Table.tsx',
-          'src/components/TutorialPanel/TutorialPanel.tsx',
           'src/components/Wizard/Wizard.tsx',
         ],
       },
