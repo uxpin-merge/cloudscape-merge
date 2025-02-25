@@ -1,8 +1,8 @@
 import { ReactNode, useEffect } from 'react';
 import { Theme, applyTheme } from '@cloudscape-design/components/theming';
-import "@cloudscape-design/global-styles/index.css";
 import { I18nProvider } from '@cloudscape-design/components/i18n';
 import messages from '@cloudscape-design/components/i18n/messages/all.all';
+import "@cloudscape-design/global-styles/index.css";
 
 const theme: Theme = {
   //Edit your tokens here if needed
@@ -16,10 +16,7 @@ const theme: Theme = {
 
 export default function UXPinWrapper({ children }: { children: ReactNode }) {
 
-  useEffect(() => {
-    applyTheme({ theme });
-  }, []);
+  useEffect(() => { applyTheme({ theme }); }, []);
 
-  return <I18nProvider messages={[messages]}>
-    {children}</I18nProvider>
+  return <I18nProvider messages={[messages]}>{children}</I18nProvider>
 }

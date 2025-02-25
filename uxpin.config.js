@@ -8,6 +8,7 @@ module.exports = {
           'src/components/AnnotationContext/AnnotationContext.tsx',
           'src/components/AnchorNavigation/AnchorNavigation.tsx',
           'src/components/AppLayout/AppLayout.tsx',
+          'src/components/AttributeEditor/AttributeEditor.tsx',
           'src/components/Autosuggest/Autosuggest.tsx',
           'src/components/Badge/Badge.tsx',
           'src/components/Board/Board.tsx',
@@ -96,7 +97,6 @@ module.exports = {
         name: 'TODO',
         include: [
           'src/components/AreaChart/AreaChart.tsx',
-          'src/components/AttributeEditor/AttributeEditor.tsx',
           'src/components/BarChart/BarChart.tsx',
           'src/components/DateRangePicker/DateRangePicker.tsx',
           'src/components/FileTokenGroup/FileTokenGroup.tsx',
