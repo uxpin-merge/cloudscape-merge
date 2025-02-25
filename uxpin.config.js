@@ -29,6 +29,7 @@ module.exports = {
           'src/components/CopyToClipboard/CopyToClipboard.tsx',
           'src/components/DateInput/DateInput.tsx',
           'src/components/DatePicker/DatePicker.tsx',
+          'src/components/DateRangePicker/DateRangePicker.tsx',
           'src/components/Drawer/Drawer.tsx',
           'src/components/ExpandableSection/ExpandableSection.tsx',
           'src/components/FileDropzone/FileDropzone.tsx',
@@ -98,7 +99,6 @@ module.exports = {
         include: [
           'src/components/AreaChart/AreaChart.tsx',
           'src/components/BarChart/BarChart.tsx',
-          'src/components/DateRangePicker/DateRangePicker.tsx',
           'src/components/FileTokenGroup/FileTokenGroup.tsx',
           'src/components/LineChart/LineChart.tsx',
           'src/components/MixedLineBarChart/MixedLineBarChart.tsx',
