@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import DateRangePickerBase, { DateRangePickerProps } from "@cloudscape-design/components/date-range-picker";
-
+/**
+* @uxpindocurl https://cloudscape.design/components/date-range-picker/
+* @uxpindescription With the date range picker, users can specify a date and time range. 
+*/
 const DateRangePicker = (props: DateRangePickerProps) => {
   const [value, setValue] = useState<DateRangePickerProps["value"] | null>(null);
 

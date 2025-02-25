@@ -1,6 +1,9 @@
 import React from "react";
 import TutorialPanelBase, { TutorialPanelProps } from "@cloudscape-design/components/tutorial-panel";
-
+/**
+* @uxpindocurl https://cloudscape.design/components/tutorial-panel/
+* @uxpindescription The tutorial panel houses contextual Hands-on tutorials that help users learn how to use a service. 
+*/
 const TutorialPanel = (props: TutorialPanelProps) => {
   const defaultI18nStrings: TutorialPanelProps["i18nStrings"] = {
     labelsTaskStatus: {
