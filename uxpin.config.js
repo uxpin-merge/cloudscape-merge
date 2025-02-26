@@ -34,6 +34,7 @@ module.exports = {
           'src/components/ExpandableSection/ExpandableSection.tsx',
           'src/components/FileDropzone/FileDropzone.tsx',
           'src/components/FileInput/FileInput.tsx',
+          'src/components/FileTokenGroup/FileTokenGroup.tsx',
           'src/components/FileUpload/FileUpload.tsx',
           'src/components/Flashbar/Flashbar.tsx',
           'src/components/Form/Form.tsx',
@@ -100,7 +101,6 @@ module.exports = {
         include: [
           'src/components/AreaChart/AreaChart.tsx',
           'src/components/BarChart/BarChart.tsx',
-          'src/components/FileTokenGroup/FileTokenGroup.tsx',
           'src/components/LineChart/LineChart.tsx',
           'src/components/MixedLineBarChart/MixedLineBarChart.tsx',
           'src/components/PieChart/PieChart.tsx',
