@@ -10,14 +10,15 @@ const Tabs = (props: TabsProps) => {
   );
   React.useEffect(() => {
     setActiveTabId(props.activeTabId)
-  }, [props]); // Only re-run the effect if value prop changes
+  }, [props.activeTabId]); // Only re-run the effect if value prop changes
 
-  return <TabsBase {...props}
-    onChange={({ detail }) =>
-      setActiveTabId(detail.activeTabId)
-    }
-    activeTabId={activeTabId}
-  />;
+  return (<div>
+    test: {activeTabId}<TabsBase {...props}
+      onChange={({ detail }) =>
+        setActiveTabId(detail.activeTabId)
+      }
+      activeTabId={activeTabId}
+    /></div>);
 };
 
 export default Tabs;
