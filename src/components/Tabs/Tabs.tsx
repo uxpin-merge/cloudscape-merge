@@ -1,24 +1,36 @@
-import React from 'react';
-import TabsBase, { TabsProps } from '@cloudscape-design/components/tabs';
+import React from "react";
+import TabsBase, { TabsProps } from "@cloudscape-design/components/tabs";
+
 /**
  * @uxpindocurl https://cloudscape.design/components/tabs/
- * @uxpindescription With tabs, users can switch between different categories of information in the same view.
+ * @uxpindescription A tabbed interface for organizing content.
  */
-const Tabs = (props: TabsProps) => {
-  const [activeTabId, setActiveTabId] = React.useState(
-    props.activeTabId
-  );
-  React.useEffect(() => {
-    setActiveTabId(props.activeTabId)
-  }, [props.activeTabId]); // Only re-run the effect if value prop changes
 
-  return (<div>
-    test: {activeTabId}<TabsBase {...props}
-      onChange={({ detail }) =>
-        setActiveTabId(detail.activeTabId)
-      }
+const Tabs = (props: TabsProps) => {
+  // Ensure activeTabId state is always controlled
+  const [activeTabId, setActiveTabId] = React.useState<string>(
+    props.activeTabId ?? (props.tabs?.[0]?.id || "")
+  );
+
+  React.useEffect(() => {
+    if (props.activeTabId !== undefined) {
+      setActiveTabId(props.activeTabId);
+    }
+  }, [props.activeTabId]);
+
+  // Handle tab change
+  const handleChange: TabsProps["onChange"] = (event) => {
+    setActiveTabId(event.detail.activeTabId);
+    props.onChange?.(event); // Pass the event to the parent if needed
+  };
+
+  return (
+    <TabsBase
+      {...props}
       activeTabId={activeTabId}
-    /></div>);
+      onChange={handleChange}
+    />
+  );
 };
 
 export default Tabs;
