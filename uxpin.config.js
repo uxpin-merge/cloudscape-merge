@@ -77,6 +77,7 @@ module.exports = {
           'src/components/TokenGroup/TokenGroup.tsx',
           'src/components/TopNavigation/TopNavigation.tsx',
           'src/components/TutorialPanel/TutorialPanel.tsx',
+          'src/components/GlobalStyles/GlobalStyles.js',
         ],
       },
       {
