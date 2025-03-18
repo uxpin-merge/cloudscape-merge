@@ -6,7 +6,22 @@ import TabsBase, { TabsProps } from "@cloudscape-design/components/tabs";
  * @uxpindescription A tabbed interface for organizing content.
  */
 
-const Tabs = (props: TabsProps) => {
+interface ExtendedTabsProps extends TabsProps {
+  /**
+  * The ID of the currently active tab. This prop controls which tab is selected. If not provided, defaults to the first tab's ID.
+  * @uxpinbind onChange 0.detail.activeTabId
+  */
+  activeTabId?: string;
+
+  /**
+   * Callback fired when the active tab changes.
+   * @param event - The event object containing details about the tab change.
+   * @param event.detail.activeTabId - The ID of the newly selected tab.
+   */
+  onChange?: (event: { detail: { activeTabId: string } }) => void;
+}
+
+const Tabs = (props: ExtendedTabsProps) => {
   // Ensure activeTabId state is always controlled
   const [activeTabId, setActiveTabId] = React.useState<string>(
     props.activeTabId ?? (props.tabs?.[0]?.id || "")
@@ -33,4 +48,4 @@ const Tabs = (props: TabsProps) => {
   );
 };
 
-export default Tabs;
+export default Tabs
