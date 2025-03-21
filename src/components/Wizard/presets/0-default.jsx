@@ -13,7 +13,7 @@ export default (
   <Wizard
     uxpId="wizard-1"
     submitButtonText="Launch instance"
-    activeStepIndex={2}
+    activeStepIndex={0}
     allowSkipTo
     i18nStrings={{
       navigationAriaLabel: 'Steps',

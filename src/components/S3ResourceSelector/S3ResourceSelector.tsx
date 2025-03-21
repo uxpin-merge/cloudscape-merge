@@ -34,8 +34,6 @@ const S3ResourceSelector = (props: ExtendedS3ResourceSelectorProps) => {
       fetchVersions={() => Promise.resolve(props.fetchVersionsObject)}
       onChange={({ detail }) => setResource(detail.resource)}
       resource={resource}
-    // selectableItemsTypes={['buckets', 'objects', 'versions']}
-    // viewHref="https://example.com/"
     />
   );
 };
