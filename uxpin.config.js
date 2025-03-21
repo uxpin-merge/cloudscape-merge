@@ -77,6 +77,7 @@ module.exports = {
           'src/components/TokenGroup/TokenGroup.tsx',
           'src/components/TopNavigation/TopNavigation.tsx',
           'src/components/TutorialPanel/TutorialPanel.tsx',
+          'src/components/Wizard/Wizard.tsx',
         ],
       },
       {
@@ -106,7 +107,6 @@ module.exports = {
           'src/components/PieChart/PieChart.tsx',
           'src/components/S3ResourceSelector/S3ResourceSelector.tsx',
           'src/components/Table/Table.tsx',
-          'src/components/Wizard/Wizard.tsx',
         ],
       },
     ],
