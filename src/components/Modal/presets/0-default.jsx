@@ -10,10 +10,10 @@ export default (
     footer={
       <Box float="right" uxpId="modal-box-1">
         <SpaceBetween direction="horizontal" size="xs" uxpId="modal-spacebetween-1">
-          <Button variant="link" uxpId="modal-button-1">
+          <Button uxpButtonType={'cancel'} variant="link" uxpId="modal-button-1">
             Cancel
           </Button>
-          <Button variant="primary" uxpId="modal-button-2">
+          <Button uxpButtonType={'ok'} variant="primary" uxpId="modal-button-2">
             Ok
           </Button>
         </SpaceBetween>
