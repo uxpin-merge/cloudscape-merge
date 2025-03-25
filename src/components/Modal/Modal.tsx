@@ -56,7 +56,6 @@ const recursivelyModifyChildren = (
     }
 
     if (child.props.uxpButtonType === 'ok') {
-      console.log('kirwa');
       props.onClick = onOk;
     }
 
