@@ -1,22 +1,23 @@
 import React from 'react';
 import MultiselectBase, { MultiselectProps } from '@cloudscape-design/components/multiselect';
+
+interface MultiselectPropsProps extends MultiselectProps {
+  /**
+   *  Specifies the currently selected options. Provide an empty array to clear the selection.
+  * @uxpinbind onChange 0.detail.selectedOptions
+  */
+  selectedOptions: any;
+}
+
 /**
  * @uxpindocurl https://cloudscape.design/components/multiselect/
  * @uxpindescription Multiselects enable users to choose multiple items from a list of options.
  */
-const Multiselect = (props: MultiselectProps) => {
-  //Ensure `selectedOptions` is mutable by creating a copy
-  const [selectedOptions, setSelectedOptions] = React.useState<MultiselectProps.Option[]>([...(props.selectedOptions ?? [])]);
-
-  React.useEffect(() => {
-    setSelectedOptions([...(props.selectedOptions ?? [])])
-  }, [props]);
+const Multiselect = (props: MultiselectPropsProps) => {
 
   return (
     <MultiselectBase
       {...props}
-      selectedOptions={selectedOptions}
-      onChange={({ detail }) => setSelectedOptions([...detail.selectedOptions])} //Convert to mutable array
     />
   );
 };

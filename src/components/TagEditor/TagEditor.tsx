@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TagEditorBase, { TagEditorProps } from "@cloudscape-design/components/tag-editor";
-/**
- * @uxpindocurl https://cloudscape.design/components/tag-editor/
- * @uxpindescription An extension of the attribute editor built with integrated logic. With the tag editor, users can create, edit, or delete resource tags.
- */
+
+
 /**
  * Extended TagEditorProps to include keysRequestValues, valuesRequestValues, and tags as props
  */
@@ -12,6 +10,11 @@ interface ExtendedTagEditorProps extends TagEditorProps {
   valuesRequestValues?: string[]; // Optional array of values
   tags?: { key: string; value: string; existing: boolean }[]; // Allow passing `tags` as a prop
 }
+
+/**
+ * @uxpindocurl https://cloudscape.design/components/tag-editor/
+ * @uxpindescription An extension of the attribute editor built with integrated logic. With the tag editor, users can create, edit, or delete resource tags.
+ */
 
 const TagEditor = (props: ExtendedTagEditorProps) => {
   const [tags, setTags] = useState<{ key: string; value: string; existing: boolean }[]>(props.tags ?? []);
