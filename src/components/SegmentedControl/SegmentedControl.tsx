@@ -4,20 +4,17 @@ import SegmentedControlBase, { SegmentedControlProps } from '@cloudscape-design/
 * @uxpindocurl https://cloudscape.design/components/segmented-control/
 * @uxpindescription With a segmented control, users can toggle between different ways of formatting a piece of content or data.
 */
-const SegmentedControl = (props: SegmentedControlProps) => {
-  const [selectedId, setSelectedId] = React.useState(
-    props.selectedId
-  );
-  React.useEffect(() => {
-    setSelectedId(props.selectedId)
-  }, [props.selectedId]);
+interface ExtendedSegmentedControlProps extends SegmentedControlProps {
+  /**
+   *  ID of the selected option. If you want to clear the selection, use null.
+  * @uxpinbind onChange 0.detail.selectedId
+  */
+  selectedId: string;
+}
 
-  return <SegmentedControlBase {...props}
-    selectedId={selectedId}
-    onChange={({ detail }) =>
-      setSelectedId(detail.selectedId)
-    }
-  />;
+const SegmentedControl = (props: ExtendedSegmentedControlProps) => {
+
+  return <SegmentedControlBase {...props} />;
 };
 
 export default SegmentedControl;
