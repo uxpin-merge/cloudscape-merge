@@ -2,7 +2,7 @@ import React from 'react';
 import InputBase, { InputProps } from '@cloudscape-design/components/input';
 interface ExtendedInputProps extends InputProps {
   /**
-   *  ID of the selected option. If you want to clear the selection, use null.
+   *  Value of the input.
   * @uxpinbind onChange 0.detail.value
   */
   value: string;

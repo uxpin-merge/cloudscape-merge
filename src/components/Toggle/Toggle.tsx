@@ -1,21 +1,21 @@
 import React from 'react';
 import ToggleBase, { ToggleProps } from '@cloudscape-design/components/toggle';
+
+interface ExtendedToggleProps extends ToggleProps {
+  /**
+   *  Value of the input.
+  * @uxpinbind onChange 0.detail.checked
+  */
+  checked: boolean;
+}
+
 /**
 * @uxpindocurl https://cloudscape.design/components/toggle/
 * @uxpindescription Toggles enable users to turn an option on or off, and can result in an immediate change.
 */
-const Toggle = (props: ToggleProps) => {
-  const [checked, setChecked] = React.useState(false);
+const Toggle = (props: ExtendedToggleProps) => {
 
-  React.useEffect(() => {
-    setChecked(props.checked)
-  }, [props]);
-  return <ToggleBase
-    onChange={({ detail }) =>
-      setChecked(detail.checked)
-    }
-    checked={checked}
-  >
+  return <ToggleBase {...props} >
     Toggle
   </ToggleBase>
 };
