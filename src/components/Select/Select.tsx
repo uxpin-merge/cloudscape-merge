@@ -1,25 +1,35 @@
 import React from 'react';
 import SelectBase, { SelectProps } from '@cloudscape-design/components/select';
-interface ExtendedSelectProps extends SelectProps {
+
+type OptionDefinition = NonNullable<SelectProps['selectedOption']>;
+
+interface ExtendedSelectProps extends Omit<SelectProps, 'selectedOption' | 'onChange'> {
   /**
-   *  ID of the selected option. If you want to clear the selection, use null.
-  * @uxpinbind onChange 0.detail.selectedOption
-  */
-  selectedOption: any;
+   * ID of the selected option. Use null to clear the selection.
+   * @uxpinbind onChange
+   */
+  selectedOptionId: string | null;
+
+  /**
+   * Called when the selection changes. Sends back the new selectedOptionId.
+   */
+  onChange?: (selectedId: string | null) => void;
 }
-/**
-* @uxpindocurl https://cloudscape.design/components/select/
-* @uxpindescription Selects enable users to choose a single item from a list of items.
-*/
-const Select = (props: ExtendedSelectProps) => {
+
+const Select = ({ selectedOptionId, options = [], onChange, ...rest }: ExtendedSelectProps) => {
+  const selectedOption = options.find(opt => opt.value === selectedOptionId) ?? null;
 
   return (
     <SelectBase
-      {...props}
-
+      {...rest}
+      options={options}
+      selectedOption={selectedOption}
+      onChange={(e) => {
+        const selected = e.detail.selectedOption;
+        onChange?.(selected?.value ?? null);
+      }}
     />
   );
 };
-
 
 export default Select;
