@@ -15,9 +15,7 @@ interface ExtendedToggleProps extends ToggleProps {
 */
 const Toggle = (props: ExtendedToggleProps) => {
 
-  return <ToggleBase {...props} >
-    Toggle
-  </ToggleBase>
+  return <ToggleBase {...props} />
 };
 
 export default Toggle;
