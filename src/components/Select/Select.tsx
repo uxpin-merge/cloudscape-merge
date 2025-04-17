@@ -6,7 +6,6 @@ type OptionDefinition = NonNullable<SelectProps['selectedOption']>;
 interface ExtendedSelectProps extends Omit<SelectProps, 'selectedOption' | 'onChange'> {
   /**
    * ID of the selected option. Use null to clear the selection.
-   * @uxpinbind onChange
    */
   selectedOptionId: string | null;
 
@@ -14,9 +13,15 @@ interface ExtendedSelectProps extends Omit<SelectProps, 'selectedOption' | 'onCh
    * Called when the selection changes. Sends back the new selectedOptionId.
    */
   onChange?: (selectedId: string | null) => void;
+
+  /**
+   *
+   * @uxpinignoreprop
+   */
+  uxpinOnChange: (prevValue:any, nextValue:any, propertyName:string) => void
 }
 
-const Select = ({ selectedOptionId, options = [], onChange, ...rest }: ExtendedSelectProps) => {
+const Select = ({ selectedOptionId, uxpinOnChange, options = [], onChange, ...rest }: ExtendedSelectProps) => {
   const selectedOption = options.find(opt => opt.value === selectedOptionId) ?? null;
 
   return (
@@ -27,6 +32,8 @@ const Select = ({ selectedOptionId, options = [], onChange, ...rest }: ExtendedS
       onChange={(e) => {
         const selected = e.detail.selectedOption;
         onChange?.(selected?.value ?? null);
+        // @uxpinbind does not work when component is passed in JSON property
+        uxpinOnChange(selectedOptionId, selected?.value ?? null, 'selectedOptionId')
       }}
     />
   );
