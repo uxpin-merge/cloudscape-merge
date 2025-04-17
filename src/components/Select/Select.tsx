@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SelectBase, { SelectProps } from '@cloudscape-design/components/select';
 
 type OptionDefinition = NonNullable<SelectProps['selectedOption']>;
@@ -17,7 +17,14 @@ interface ExtendedSelectProps extends Omit<SelectProps, 'selectedOption' | 'onCh
 }
 
 const Select = ({ selectedOptionId, options = [], onChange, ...rest }: ExtendedSelectProps) => {
-  const selectedOption = options.find(opt => opt.value === selectedOptionId) ?? null;
+  // @uxpinbind is not handled in JSON property. useState ws added to handle changing option when Select is used in JSON property
+  const [optionId, setOption] = useState(selectedOptionId)
+
+  useEffect(() => {
+    setOption(selectedOptionId);
+  }, [selectedOptionId])
+
+  const selectedOption = options.find(opt => opt.value === optionId) ?? null;
 
   return (
     <SelectBase
@@ -27,6 +34,7 @@ const Select = ({ selectedOptionId, options = [], onChange, ...rest }: ExtendedS
       onChange={(e) => {
         const selected = e.detail.selectedOption;
         onChange?.(selected?.value ?? null);
+        setOption(selected?.value ?? null);
       }}
     />
   );
