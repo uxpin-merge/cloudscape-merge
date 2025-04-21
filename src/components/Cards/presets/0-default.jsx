@@ -6,6 +6,8 @@ export default (
   <Cards
     uxpId="cards-1"
     header={<Header uxpId="cards-header-1">Example Cards</Header>}
+    selectionType="multi"
+    trackBy={'name'}
     selectedItems={[{ name: 'Item 2' }]}
     items={[
       {

@@ -15,10 +15,16 @@ export default (props: CardsProps) => {
     header: key.charAt(0).toUpperCase() + key.slice(1), // Capitalize first letter
     content: (item: any) => item[key],
   }));
+
+
   const [
     selectedItems,
     setSelectedItems
-  ] = React.useState([{ name: "Item 2" }]);
+  ] = React.useState(props.selectedItems);
+
+  React.useEffect(() => {
+    setSelectedItems(props.selectedItems);
+  }, [props.selectedItems]);
 
 
   return (
