@@ -13,7 +13,7 @@ interface ItemType {
     columnSpan?: number;
     data: {
         title: string;
-        content: string;
+        content: React.ReactElement;
     };
 }
 
