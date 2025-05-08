@@ -81,6 +81,8 @@ module.exports = {
           'src/components/TopNavigation/TopNavigation.tsx',
           'src/components/TutorialPanel/TutorialPanel.tsx',
           'src/components/Wizard/Wizard.tsx',
+          'src/components/WizardWrapper/WizardWrapper.tsx',
+          'src/components/WizardWrapperItem/WizardWrapperItem.tsx',
         ],
       },
       {

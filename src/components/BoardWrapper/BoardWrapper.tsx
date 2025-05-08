@@ -29,8 +29,6 @@ const BoardWrapper = ({ items, children, ...otherProps}: BoardProps & { items?: 
           return acc;
       }, {});
 
-    console.log(items, otherProps);
-
     const transformedItems = items.map(item => ({
         ...item,
         data: {
