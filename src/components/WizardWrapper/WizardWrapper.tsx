@@ -7,10 +7,13 @@ type StepWithId = WizardProps['steps'][number] & { id: string };
 interface WizardWrapperProps extends WizardProps {
   children: React.ReactNode,
   steps: StepWithId[],
+  /**
+   * @uxpinbind onNavigate 0.detail.requestedStepIndex
+   */
+  activeStepIndex?:number,
 }
 
 const WizardWrapper = (props: WizardWrapperProps) => {
-  console.log(props);
   const contentMap = (React.Children.toArray(props.children)
     .filter(child => React.isValidElement(child) && child.props.id) as React.ReactElement[])
     .reduce((acc:{ [key:string]: React.ReactElement}, child: React.ReactElement) => {

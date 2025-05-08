@@ -34,9 +34,12 @@ const Wizard = (props: WizardProps) => {
         `Skip to ${step.title}`,
       ...props.i18nStrings
     }}
-    onNavigate={({ detail }) =>
-      setActiveStepIndex(detail.requestedStepIndex)
-    }
+    onNavigate={(e) => {
+      setActiveStepIndex(e.detail.requestedStepIndex)
+      if (props.onNavigate) {
+        props.onNavigate(e);
+      }
+    }}
     activeStepIndex={activeStepIndex}
   // steps={[
   //   {
