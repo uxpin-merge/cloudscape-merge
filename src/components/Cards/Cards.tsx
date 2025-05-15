@@ -34,7 +34,7 @@ export default (props: CardsProps) => {
         itemSelectionLabel: (e, i) => `select ${i.name}`,
         selectionGroupLabel: "Item selection"
       }}
-      cardDefinition={{
+      cardDefinition={props.cardDefinition || {
         header: item => (
           <Link href="#" fontSize="heading-m">
             {item.name}
