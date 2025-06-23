@@ -22,10 +22,11 @@ const TopNavigation = (props: TopNavigationProps) => {
              // @ts-ignore
              if (property.indexOf('--') === 0) {
                 header.style.setProperty(
-                 '--color-background-container-content-z79u4u',
+                 property,
                   style[property]
                );
              } else {
+               //@ts-ignore
                header.style[property] = style[property];
              }
            });
