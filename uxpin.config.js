@@ -140,6 +140,11 @@ module.exports = {
         }
       
       - Do not pass functions in columnDefinitions (like cell or renderItem).
+      Wizard Component Rules
+       - in i18nStrings property object IGNORE functional props like:
+           stepNumberLabel,
+           collapsedStepsLabel,
+           skipToButtonLabel,
     ` },
     useUXPinProps: true,
     useConvertingToUXPinClassic: true
