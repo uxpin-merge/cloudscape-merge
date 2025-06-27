@@ -140,11 +140,13 @@ module.exports = {
         }
       
       - Do not pass functions in columnDefinitions (like cell or renderItem).
-      Wizard Component Rules
-       - in i18nStrings property object IGNORE functional props like:
-           stepNumberLabel,
-           collapsedStepsLabel,
-           skipToButtonLabel,
+      Wizard Component Rules:
+      - In the \`i18nStrings\` object, completely omit any properties that are functions, specifically:
+        - stepNumberLabel
+        - collapsedStepsLabel
+        - skipToButtonLabel
+      - Do not include these properties at all in the generated code, even as strings.
+      - Only include the other properties as usual.
     ` },
     useUXPinProps: true,
     useConvertingToUXPinClassic: true
