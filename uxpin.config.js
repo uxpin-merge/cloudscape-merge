@@ -118,5 +118,30 @@ module.exports = {
     webpackConfig: 'webpack.config.js',
   },
   name: 'Cloudscape Design System',
-  settings: { useUXPinProps: true, useConvertingToUXPinClassic: true },
+  settings: {
+    useAI: { name: 'Cloudscape Design System (Amazon)', documentationUrl: 'https://cloudscape.design/components/', systemPrompt: `
+      Do not pass any functions as props to any component — only use static, serializable values.
+      Table Component Rules:
+      - columnDefinitions must be an array of objects:
+        {
+          id: string;
+          header: string;
+          sortingField?: string;
+          isRowHeader?: boolean;
+        }
+      
+      - items must be an array like:
+        {
+          name: string;
+          alt?: string;
+          description?: string;
+          type?: string;
+          size?: string;
+        }
+      
+      - Do not pass functions in columnDefinitions (like cell or renderItem).
+    ` },
+    useUXPinProps: true,
+    useConvertingToUXPinClassic: true
+  },
 };
