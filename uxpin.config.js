@@ -138,7 +138,6 @@ module.exports = {
           type?: string;
           size?: string;
         }
-      
       - Do not pass functions in columnDefinitions (like cell or renderItem).
       Wizard Component Rules:
       - In the \`i18nStrings\` object, completely omit any properties that are functions, specifically:
@@ -147,6 +146,18 @@ module.exports = {
         - skipToButtonLabel
       - Do not include these properties at all in the generated code, even as strings.
       - Only include the other properties as usual.
+       Board Component Rules:
+       - items must be an array of objects:
+        {
+          id: string;
+          rowSpan?: number;
+          columnSpan?: number;
+          data: {
+              title: string;
+              content: React.ReactElement;
+          };
+        }
+        - you can only include empty and items properties at all in the generated code
     ` },
     useUXPinProps: true,
     useConvertingToUXPinClassic: true
