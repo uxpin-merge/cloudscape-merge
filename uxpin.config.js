@@ -120,6 +120,12 @@ module.exports = {
   name: 'Cloudscape Design System',
   settings: {
     useAI: { name: 'Cloudscape Design System (Amazon)', documentationUrl: 'https://cloudscape.design/components/', systemPrompt: `
+      All Component Rules:
+      - Do not include props that are functions or objects containing functions.
+      - Only use primitive props (string, number, boolean, null, undefined) and plain objects or arrays without any functions.
+      - Avoid inline arrow functions, callbacks, or event handlers in JSX.
+      Pagination Component Rules:
+      - omit ariaLabels property
       Cards Component Rules:
       - completely omit  cardDefinition property, it's generated automatically based on items property
       Table Component Rules:
