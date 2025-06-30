@@ -120,7 +120,8 @@ module.exports = {
   name: 'Cloudscape Design System',
   settings: {
     useAI: { name: 'Cloudscape Design System (Amazon)', documentationUrl: 'https://cloudscape.design/components/', systemPrompt: `
-      Do not pass any functions as props to any component — only use static, serializable values.
+      Cards Component Rules:
+      - completely omit  cardDefinition property, it's generated automatically based on items property
       Table Component Rules:
       - columnDefinitions must be an array of objects:
         {
