@@ -124,6 +124,10 @@ module.exports = {
       - Do not include props that are functions or objects containing functions.
       - Only use primitive props (string, number, boolean, null, undefined) and plain objects or arrays without any functions.
       - Avoid inline arrow functions, callbacks, or event handlers in JSX.
+      Container Component Rules:
+      - props header and footer must always be defined.
+      - If no specific content is needed for header or footer, use an empty string ("").
+      - Do not omit header or footer under any circumstance.
       Pagination Component Rules:
       - omit ariaLabels property
       Cards Component Rules:
