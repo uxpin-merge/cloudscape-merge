@@ -1,11 +1,17 @@
 import * as React from "react";
 import CardsBase, { CardsProps } from '@cloudscape-design/components/cards';
 import Link from '../Link/Link';
+
+
+interface CardsPropsExtended extends CardsProps {
+  selectedIndex: string;
+}
+
 /**
  * @uxpindocurl https://cloudscape.design/components/cards/
  * @uxpindescription Represents a collection of resources.
  */
-export default (props: CardsProps) => {
+export default (props: CardsPropsExtended) => {
   const items = props.items
 
   // Generate sections dynamically based on the first item's keys (excluding `name` and `alt`).
@@ -24,7 +30,9 @@ export default (props: CardsProps) => {
 
   React.useEffect(() => {
     setSelectedItems(props.selectedItems);
-  }, [props.selectedItems]);
+    // @ts-ignore
+    props.uxpinOnChange(props.selectedIndex, findIndicesByProps(props.items, props.selectedItems), 'selectedIndex');
+  }, [props.selectedItems, props.items]);
 
 
   return (
@@ -45,11 +53,37 @@ export default (props: CardsProps) => {
       cardsPerRow={props.cardsPerRow}
       items={items}
       loadingText={props.loadingText}
-      onSelectionChange={({ detail }) =>
-        setSelectedItems(detail?.selectedItems ?? [])
-      }
+      onSelectionChange={(data) => {
+        // @ts-ignore
+        props.uxpinOnChange(props.selectedItems, data.detail?.selectedItems ?? [], 'selectedItems');
+        if (props.onSelectionChange) {
+          props.onSelectionChange(data);
+        }
+      }}
       selectedItems={selectedItems}
 
     />
   );
 };
+
+function findIndicesByProps(array:any[], criteria: object) {
+  const criteriaArray = Array.isArray(criteria) ? criteria : [criteria];
+  const indices:number[] = [];
+
+  array.forEach((item, index) => {
+    for (const crit of criteriaArray) {
+      const match = Object.entries(crit).every(
+        ([key, value]) => item[key] === value
+      );
+      if (match) {
+        indices.push(index);
+        break;
+      }
+    }
+  });
+
+
+  const uniqueIndices = Array.from(new Set(indices));
+
+  return uniqueIndices.join(',');
+}
