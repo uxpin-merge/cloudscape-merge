@@ -83,7 +83,6 @@ function findIndicesByProps(array:any[], criteria: object) {
   });
 
 
-  const uniqueIndices = Array.from(new Set(indices));
-
+  const uniqueIndices = Array.from(new Set(indices)).sort((a, b) => a - b);
   return uniqueIndices.join(',');
 }
