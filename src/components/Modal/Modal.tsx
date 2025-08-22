@@ -38,7 +38,7 @@ const Modal = (props: ExtendedModalProps) => {
     <ModalBase
       {...props}
       footer={modifiedFooter}
-      onDismiss={() => setVisible(false)}
+      // onDismiss={() => setVisible(false)}
       visible={visible}
     />
   )
